@@ -24,5 +24,8 @@ jobs:
           echo "## Failure modes" >> report.md
           cat failure_modes.txt >> report.md
           
+          # show nvidia-smi
+          nvidia-smi >> report.md
+          
           # Send it!
           cml-send-comment report.md
